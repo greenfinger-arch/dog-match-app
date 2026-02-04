@@ -106,7 +106,13 @@ function App() {
             <div className="w-full bg-slate-100 h-2 rounded-full overflow-hidden">
               <div className="bg-blue-500 h-full transition-all duration-500" style={{ width: `${((currentStep + 1) / questions.length) * 100}%` }}></div>
             </div>
-            <img src={questions[currentStep].image || "/images/main.jpg"} className="w-full h-44 object-cover rounded-2xl shadow-sm" alt="quiz-step" />
+
+           <img 
+  src={questions[currentStep].image || "/images/main.jpg"} 
+  className="w-full aspect-[4/3] object-cover rounded-2xl shadow-sm" 
+  alt="quiz-step" 
+/>
+
             <div className="space-y-1">
               <span className="text-blue-600 font-bold text-xs">QUESTION {currentStep + 1} / 10</span>
               <h2 className="text-xl font-bold text-slate-800">{questions[currentStep].question}</h2>
